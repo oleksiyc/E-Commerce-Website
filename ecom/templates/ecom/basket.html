@@ -1,0 +1,63 @@
+{% extends "ecom/base.html" %}
+{% block content %}
+
+<script>
+    var items;
+
+    var fetchProducts = {
+        url: '{% url 'ecom:getProductsInbasket' %}',
+        dataType: 'json',
+        success: function (data) {
+            populateList(data);
+        }
+    }
+
+    $(document).ready(function() {
+        $.ajax(fetchProducts)
+    })
+
+    function populateList(data) {
+        items = data
+        populateContainer()
+        addOptions()
+    }
+
+    function changeQuantity(pk) {
+        debugger;
+        val = $('#'+pk+'').val()
+        var updateQuantity = {
+            url: '{% url 'ecom:changeQuantity' %}',
+            dataType: 'json',
+            data: {
+                "article_id": pk,
+                "value": val
+            },
+        }
+        $.ajax(updateQuantity)
+    }
+
+    function populateContainer() {
+        $('#shoppingContainer').html("<tr><th>Image</th><th>Product Name</th><th>Price</th><th>Quantity</th></tr>")
+        $.each(items, function (index,item) {
+            var elem = item.fields
+            $('#shoppingContainer').append(
+                '<tr><td><img src="'+elem.picture_link+'"/></td><td>'+elem.name+'</td><td>'+elem.price+'</td><td><select onChange="changeQuantity(\''+item.pk+'\')" id="'+item.pk+'"></select></td></tr>'
+            )
+        })
+    }
+
+    function addOptions(){
+        for (i=1;i<=10;i++){
+            $('select').append($('<option></option>').val(i).html(i))
+        }
+    }
+
+</script>
+
+<div class="container">
+<table id=shoppingContainer>
+</table>
+
+</div>
+{% endblock %}
+

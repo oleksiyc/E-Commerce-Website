@@ -1,0 +1,289 @@
+/* styles.css */
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+* {
+  font-family:Arial, Helvetica, sans-serif;
+  
+}
+
+h2{
+  text-align: center
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: #393939;
+}
+
+li a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+li a img {
+  width: 35px;
+  height: 35px;
+}
+
+#basketLink:hover {
+  background-color: #111;
+}
+
+#basketLink {
+  float: right;
+  width: 35px;
+  height: 35px;
+  padding: 8px 12px;
+}
+
+.logo li img {
+  float: left;
+  width: 35px;
+  height: 35px;
+  padding: 8px 12px;
+}
+
+.topContainer img{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.loginContainer {
+  width: 360px;
+  padding: 20% 0 0;
+  margin: auto;
+}
+.form {
+
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.container {
+  margin-top: 2%;
+  max-width: 100%;
+  z-index: 1;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+}
+
+
+#custom-search-input{
+    margin-top: 2%;
+    padding: 3px;
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+#custom-search-input input{
+    border: 0;
+    box-shadow: none;
+}
+
+#custom-search-input button{
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input .glyphicon-search{
+    font-size: 23px;
+}
+
+
+
+.footer {
+  display: block;
+  background-color: #ffffff;
+  position: fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height: 45px;
+  clear: both;
+}
+
+.footer li a {
+  float:left;
+  padding: 12px 12px;
+}
+
+.footer li img {
+  width: 20px;
+  height: 20px;
+  float: right;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+
+.input[type=text] {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+    width: 100%;
+}
+
+.container table {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1), 0px 10px 20px rgba(0, 0, 0, 0.05), 0px 20px 20px rgba(0, 0, 0, 0.05), 0px 30px 20px rgba(0, 0, 0, 0.05);
+    width: 100%;
+
+}
+
+
+.container table th {
+  height: 30px;
+    background-color: #393939;
+    color: white;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+}
+.container table td {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+.container table#t01 {
+    width: 100%;    
+    background-color: #f1f1c1;
+}
+
+.account{
+  width: 400px;
+  margin: 120px auto 120px;
+  background-color: #fff;
+  padding: 0 20px 20px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1), 0px 10px 20px rgba(0, 0, 0, 0.05), 0px 20px 20px rgba(0, 0, 0, 0.05), 0px 30px 20px rgba(0, 0, 0, 0.05);
+
+  text-align: center;
+}
+h3 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+h4 {
+  font-size: 13px;
+  color: #00baff;
+  letter-spacing: 1px;
+  margin-bottom: 25px
+}
+p {
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 20px;
+  color: #666;
+}
+

@@ -1,0 +1,47 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Login</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'ecom/styles.css' %}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="tobBarNav">
+        <ul>
+            <div class="logo">
+                <li><img src="../../static/ecom/logo.png" /> </li>
+            </div>
+            {% if loggedin %}
+            <li><a href="/ecom/main">Browse Items</a></li>
+            <li><a href="/ecom/myaccount">My Account</a></li>
+            <li><a href="/ecom/logout/">Log Out</a></li>
+            <li><a id="basketLink" href="/ecom/basket"><img src="../../static/ecom/basket.png"/><a/> </li>
+            {% else %}
+            <li><a href="">About us</a></li>
+            <li><a href="/ecom/signup">Sign Up</a></li>
+            {% endif %}
+        </ul>
+    </div>
+    <div class=topContainer>
+        <img src="../../static/ecom/background.jpg"/>
+    </div>
+{% block content %}
+{% endblock %}
+
+<div class="footer">
+    <ul>
+        <li><a href="">© 2017 Panda Shopping ltd </a></li>
+        <li> <img src="../../static/ecom/facebook.png" /> </li>
+        <li> <img src="../../static/ecom/twitter.png" /> </li>
+        <li> <img src="../../static/ecom/linkedin.png" /> </li>
+        <li> <img src="../../static/ecom/youtube.png" /> </li>
+        <li><a href="">Privacy Policy</a></li>
+        <li><a href="">Contact us</a></li>
+        <li><a href="">Support</a></li>
+    </ul>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,45 @@
+{% extends "ecom/base.html" %}
+
+{% block content %}
+
+{% if errorText %}
+  <script>
+    alert("{{ errorText }}")
+  </script>
+{% endif %}
+
+<div class="login-page">
+  <div id="errorContainer">
+  </div>
+  <div class="form">
+    <form class="register-form" action="{% url 'ecom:register' %}" method="POST">
+      {% csrf_token %}
+      <p><input type="text" name="username" id="username" placeholder="Username"></p
+      <p><input type="text" name="fname" id="fname" placeholder="First Name"></p
+      <p><input type="text" name="sname" id="sname" placeholder="SurName"></p
+      <p><input type="date" name="dob" id="dob" placeholder="Date of Birth"></p
+      <p><input type="number" name="phonenum" id="phonenum" placeholder="Phone Number"></p
+      <p><input type="email" name="email" id="email" placeholder="Email"></p
+      <p><input type="text" name="address" id="address" placeholder="Address"></p
+      <p><input type="text" name="city" id="city" placeholder="City"></p
+      <p><input type="text" name="postcode" id="postcode" placeholder="Postcode"></p
+      <p><input type="password" name="password" id="password" placeholder="Password"></p
+      <input type="submit" value="Signup">
+      <button>create</button>
+      <p class="message">Already registered? <a href="#">Sign In</a></p>
+    </form>
+    <form class="login-form" action="{% url 'ecom:login' %}" method="GET">
+      <p><input type="text" name="username" id="username" placeholder="username"></p>
+      <p><input type="password" name="password" id="password" placeholder="password"></p>
+      <button type="submit" value="Login">Login</button>
+      <p class="message">Not registered? <a href="#">Create an account</a></p>
+    </form>
+  </div>
+</div>
+<script type="text/javascript">
+$('.message a').click(function(){
+   $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+});
+</script>>
+{% endblock %}
+

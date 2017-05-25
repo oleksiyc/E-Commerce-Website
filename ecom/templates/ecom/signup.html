@@ -1,0 +1,22 @@
+{% extends "ecom/base.html" %}
+
+{% block content %}
+<div class=signupContainer style="text-align: center">
+    <h2> Please enter your credentials to sign up </h2>
+    <form action="{% url 'ecom:register' %}" method="POST">
+        {% csrf_token %}
+        <p> Username: <input type="text" name="username" id="username"></p>
+        <p> First Name: <input type="text" name="fname" id="fname"></p>
+        <p> Surname: <input type="text" name="sname" id="sname"></p>
+        <p> Date of Birth: <input type="date" name="dob" id="dob"></p>
+        <p> Phone No.: <input type="number" name="phonenum" id="phonenum"></p>
+        <p> Email: <input type="email" name="email" id="email"></p>
+        <p> Address: <input type="text" name="address" id="address"></p>
+        <p> City: <input type="text" name="city" id="city"></p>
+        <p> Postcode: <input type="text" name="postcode" id="postcode"></p>
+        <p> Password: <input type="password" name="password" id="password"></p>
+        <input type="submit" value="Signup">
+    </form>
+</div>
+
+{% endblock %}
